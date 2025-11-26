@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Inter', sans-serif; /* Fonte moderna padrão. Troque pela fonte do seu Figma! */
+}
+
+:root {
+    /* CORES (Substitua pelos códigos HEX do seu Figma) */
+    --cor-primaria: #173ded; /* Azul vibrante (Destaque, Links) */
+    --cor-secundaria: #000000; /* Preto Quase Escuro (Texto, Títulos) */
+    --cor-fundo: #dcdee2; /* Cinza Muito Claro (Background) */
+    --cor-card-fundo: #ffffff; /* Branco Puro (Fundo dos Cards) */
+    --cor-bordas: #e9ecef; /* Cinza Claro (Bordas, Separadores) */
+    --cor-alerta: #000051; /* Vermelho (Para o Alerta de Fake News) */
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-secundaria);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 992px) {
+    .container-noticias {
+        /* Muda a distribuição para que a fake news ocupe mais espaço */
+        grid-template-columns: 2fr 1fr; 
+        gap: 20px;
+    }
+}
+
+/* Telas Pequenas (Celulares) */
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    .artigos ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .container-noticias {
+        /* Quebra para uma única coluna */
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-fake-news {
+        font-size: 2rem;
+    }
+
+    .banner img {
+        height: 200px;
+    }
+
+    .container-fake-news, .card {
+        padding: 20px;
+    }
+}

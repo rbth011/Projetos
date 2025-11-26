@@ -1,0 +1,17 @@
+:root {
+    /* CORES (Substitua pelos códigos HEX do seu Figma) */
+    --cor-primaria: #173ded; /* Azul vibrante (Destaque, Links) */
+    --cor-secundaria: #000000; /* Preto Quase Escuro (Texto, Títulos) */
+    --cor-fundo: #dcdee2; /* Cinza Muito Claro (Background) */
+    --cor-card-fundo: #ffffff; /* Branco Puro (Fundo dos Cards) */
+    --cor-bordas: #e9ecef; /* Cinza Claro (Bordas, Separadores) */
+    --cor-alerta: #000051; /* Vermelho (Para o Alerta de Fake News) */
+}
+
+.rodape {
+    background-color: var(--cor-alerta);
+    color: var(--cor-bordas);
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
